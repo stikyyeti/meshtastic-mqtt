@@ -1,10 +1,25 @@
 # python3.6
+# Comments assume subfolder: 'mesh_tastic_mqtt' is copied
+# and is a subfolder of appdaemon/apps in Home Assistant Supervisor
 
+# App Daemon config needs to be updated with requirements.txt
+
+# swap for AppDaemon
+# import portnums_pb2 as portnums_pb2
+# from portnums_pb2 import ENVIRONMENTAL_MEASUREMENT_APP, POSITION_APP
 import meshtastic_mqtt.portnums_pb2 as portnums_pb2
 from meshtastic_mqtt.portnums_pb2 import ENVIRONMENTAL_MEASUREMENT_APP, POSITION_APP
+
 import random
 import json
 
+# add for AppDaemon
+# from google.protobuf.json_format import MessageToJson
+
+# swap for AppDaemon
+# import mesh_pb2 as mesh_pb2
+# import mqtt_pb2 as mqtt_pb2
+# import environmental_measurement_pb2
 import meshtastic_mqtt.mesh_pb2 as mesh_pb2
 import meshtastic_mqtt.mqtt_pb2 as mqtt_pb2
 import meshtastic_mqtt.environmental_measurement_pb2 as environmental_measurement_pb2
@@ -12,8 +27,9 @@ import meshtastic_mqtt.environmental_measurement_pb2 as environmental_measuremen
 from paho.mqtt import client as mqtt_client
 
 import requests
+
 from paho.mqtt import client as mqtt_client
-from google.protobuf.json_format import MessageToJson
+
 
 #uncomment for AppDaemon
 #import hassapi as hass
